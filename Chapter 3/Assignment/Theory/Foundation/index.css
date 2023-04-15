@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: lightgreen;
+  margin-bottom: 10px;
+}
+
+.body {
+  padding: 50px;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.logo {
+  width: 80px;
+  border-radius: 10px;
+}
+
+.searchBar {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.userIcon {
+  width: 50px;
+}

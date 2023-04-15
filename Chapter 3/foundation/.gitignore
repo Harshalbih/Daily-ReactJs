@@ -1,0 +1,6 @@
+# Put all the files and folder which can be regenerated on the server
+/node_modules
+/dist
+
+.parcel-cache
+
