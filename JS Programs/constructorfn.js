@@ -3,12 +3,27 @@ function person(firstname, lastname, dob){
     this.firstname = firstname;
     this.lastname = lastname;
     this.dob= new Date(dob);
-    this.birthyear=  function(){
-        return this.dob.getFullYear();
-    };
-    this.fullname = function(){
-        return `${this.firstname} ${this.lastname}`
-    }
+    //with constructor fn
+    // this.birthyear=  function(){
+    //     return this.dob.getFullYear();
+    // };
+    // this.fullname = function(){
+    //     return `${this.firstname} ${this.lastname}`
+    // }
+}
+
+// with prototype
+person.prototype.birthyear = function(){
+    return this.dob.getFullYear();
+}
+person.prototype.fullname = function() {
+    return `${this.firstname} ${this.lastname}`;
+}
+
+//with class
+
+class person {
+    constructor(){}
 }
 
 //instantiate obj
