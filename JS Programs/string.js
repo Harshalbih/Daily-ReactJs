@@ -53,3 +53,11 @@ function capitalizeFirstLetter(string) {
 let str1 = "hubli hi";
 console.log(str1.substring(4,str1.length)) //will remove first four chars 
 console.log(str1.substring(str1.length-2)) //to remove last chars
+
+//Type Coercion
+
+let string = '44';
+let num = 44;
+let boolean = true;
+console.log(string+num); //4444
+console.log(boolean+num); //43
