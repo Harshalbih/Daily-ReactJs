@@ -90,3 +90,13 @@ let arr2 = [2, 4, 7, 8, 8, 5];
 let union = [...arr1, ...arr2];
 
 console.log([...new Set(union)]);
+
+
+//object assign
+let a = [1,2,3,4];
+let b = ["shubham", "Aniket", "Harshal", "Vipin"]
+
+const assigned = Object.assign(...a.map((sr, name)=>({
+                  [sr]:b[name]
+})))
+console.log(assigned);
