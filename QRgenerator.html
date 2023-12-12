@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Gnerator</title>
+    <style>
+      .container {
+    margin: 100px auto;
+    padding: 30px;
+    width: 30%;
+    border-radius: 50px;
+    height: 50%;
+    background: rgb(32, 146, 161);
+    text-align: center;}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>QR Code Generator</h2>
+      <p class="entertext">Enter Text To Genrate QR Code:</p><br>
+      <input type="text" id="textinput" /><br>
+      <img id="showqr" style="margin-top: 20px;" /><br>
+      <p id="error"></p><br>
+      <button id="submit button" onclick="generateQR()">Genrate QR</button>
+    </div>
+    
+    <script>
+      var inputtext = document.getElementById("textinput");
+      var qrimg = document.getElementById("showqr");
+      var errtext = document.getElementById("error");
+
+      function generateQR() {
+        if (inputtext.value.length > 0) {
+          qrimg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + inputtext.value;
+        } 
+        else {
+            errtext.innerHTML= "Please Enter Text";
+            setTimeout (()=>{
+                errtext.style.display= "none";
+            }, 3000)
+        }
+      }
+    </script>
+  </body>
+</html>
