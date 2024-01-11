@@ -1,3 +1,34 @@
+//simple props
+//app.js
+import Profile from "./profile";
+
+export default function App() {
+  return (
+    <div className="App">
+      <Profile title="hi" head="hii" />
+      <Profile title="hic" head="hic" />
+    </div>
+  );
+}
+
+//profile.js
+import React from "react";
+
+export default function Profile({ title, head }) {
+  return (
+    <div>
+      <div>title is {title}</div>
+      <div> head is {head} </div>
+    </div>
+  );
+}
+
+
+
+
+
+
+
 //Send the "brand" property from the Garage component to the Car component:
 function Car(props) {
   return <h1> I'm a {props.brand}</h1>;
@@ -51,3 +82,5 @@ function Garage() {
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Garage />);
+
+
