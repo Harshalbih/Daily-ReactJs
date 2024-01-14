@@ -25,3 +25,10 @@ return (
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<football />)
 
+            //events updated
+            function focused() {
+    var e=document.getElementById('inp');
+    if(confirm('Got it?')) {
+        e.blur();
+    }
+}
