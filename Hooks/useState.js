@@ -60,3 +60,24 @@ function App() {
 
 const useState = React.useState;
 export default App;
+
+//State update in professional way
+//Adding Elements to an Array
+const [colors, setColors] = useState(['red', 'green']);
+
+const addColor = (colorToAdd) => {
+  const updatedColors = [colorToAdd, ...colors];
+  setColors(updatedColors);
+};
+
+//Removing Elements From An Array
+const [colors, setColors] = useState(['red', 'green', 'blue']);
+
+const removeValue = (colorToRemove) => {
+  const updatedColors = colors.filter((color) => {
+    return color !== colorToRemove;
+  });
+
+  setColors(updatedColors);
+};
+
