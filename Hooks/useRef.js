@@ -1,4 +1,4 @@
-//useRef to count Re rendders
+//useRef to count rerenders
 import { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom/client";
 
@@ -21,6 +21,9 @@ function App() {
     </>
   );
 }
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
 
 //useRef to acceess DOM directly
 
