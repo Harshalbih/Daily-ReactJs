@@ -151,23 +151,7 @@ alert("You have entered an invalid email address!");
 uemail.focus();
 return false;
 }
-} function validsex(umsex,ufsex)
-{
-x=0;
-
-if(umsex.checked) 
-{
-x++;
-} if(ufsex.checked)
-{
-x++; 
-}
-if(x==0)
-{
-alert('Select Male/Female');
-umsex.focus();
-return false;
-}
+} 
 else
 {
 alert('Form Succesfully Submitted');
