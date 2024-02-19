@@ -14,6 +14,7 @@ const reducer = (state = 0, action) => {
     }
   };
 
+  //define create store by default createStore function
 const store  = createStore(reducer);
 //we can use the subscribe method provided by the store to subscribe to the changes in the store as shown below
 store.subscribe(()=>{
