@@ -10,7 +10,7 @@ function onSubmit(e) {
   e.preventDefault();
 
   if (nameInput.value === "" || emailInput.value === "") {
-    msg.innerHTML = "!!Please enter all values";
+    msg.innerHTML = "!!Please enter all fields";
 
     setTimeout(()=>msg.remove(), 3000)
   } else {
