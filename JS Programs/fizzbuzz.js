@@ -14,4 +14,4 @@ var fizz = (n) =>{
         }
     }
 }
-fizz(15);
+fizz(18);
