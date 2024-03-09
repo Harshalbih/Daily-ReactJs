@@ -7,7 +7,7 @@ const task = new Promise(async (resolve, reject) => {
       } else {
         reject(new Error(api.statusText));
       }
-    }, 1000);
+    }, 2000);
   } catch (error) {
     reject(error);
   }
