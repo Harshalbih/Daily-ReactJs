@@ -6,7 +6,8 @@ function rotate(array, num){
     for(let i=0; i<num; i++){
         let removed = array.pop();
         array.unshift(removed);
-        console.log(array);
+        
     }
+    return array;
 }
-rotate(arr, n)
+console.log(rotate(arr, n));
