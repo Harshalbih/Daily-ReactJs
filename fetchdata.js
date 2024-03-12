@@ -8,9 +8,9 @@ export default function App() {
   const api = "https://dummyjson.com/products";
 
   useEffect(() => {
-    function fetchapi() {
+    const fetchapi = async () => {
       setloading(true);
-      fetch(api)
+      await fetch(api)
         .then((result) => result.json())
         .then((result) => {
           setProduct(result.products);
@@ -21,7 +21,7 @@ export default function App() {
           setloading(false);
           setProduct(false);
         });
-    }
+    };
     fetchapi();
   }, []);
 
@@ -33,10 +33,10 @@ export default function App() {
         products?.map((value) => {
           return (
             <>
-            <p key={val.id}> {val.title}</p>
-            <img src={val.thumbnail} alt="image" />
-          </>
-          )
+              <p key={val.id}> {val.title}</p>
+              <img src={val.thumbnail} alt="image" />
+            </>
+          );
         })}
     </div>
   );

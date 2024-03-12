@@ -63,21 +63,44 @@ export default App;
 
 //State update in professional way
 //Adding Elements to an Array
-const [colors, setColors] = useState(['red', 'green']);
+import { useState } from "react";
 
-const addColor = (colorToAdd) => {
-  const updatedColors = [colorToAdd, ...colors];
-  setColors(updatedColors);
-};
+function App() {
+  const [colors, setColors] = useState(["red", "green"]);
+
+  const addColor = (colorToAdd) => {
+    const updatedColors = [colorToAdd, ...colors];
+    setColors(updatedColors);
+  };
+  return (
+    <div>
+      <button onClick={() => addColor("blue")}>click</button>
+      {colors}
+    </div>
+  );
+}
+export default App;
+
 
 //Removing Elements From An Array
-const [colors, setColors] = useState(['red', 'green', 'blue']);
 
-const removeValue = (colorToRemove) => {
-  const updatedColors = colors.filter((color) => {
-    return color !== colorToRemove;
-  });
+function App() {
+  const [colors, setColors] = useState(["red", "green", "blue"]);
 
-  setColors(updatedColors);
-};
+  const removeValue = (colorToRemove) => {
+    const updatedColors = colors.filter((color) => {
+      return color !== colorToRemove;
+    });
+
+    setColors(updatedColors);
+  };
+  return (
+    <div>
+      <button onClick={() => removeValue("blue")}>click</button>
+      {colors}
+    </div>
+  );
+}
+export default App; 
+
 
