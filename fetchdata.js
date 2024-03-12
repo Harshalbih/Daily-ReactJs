@@ -31,7 +31,12 @@ export default function App() {
       {loading && "Loading....."}
       {!loading &&
         products?.map((value) => {
-          return <p key={value.id}>{value.title}</p>;
+          return (
+            <>
+            <p key={val.id}> {val.title}</p>
+            <img src={val.thumbnail} alt="image" />
+          </>
+          )
         })}
     </div>
   );
