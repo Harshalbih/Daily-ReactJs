@@ -41,3 +41,22 @@ export default function App() {
     </div>
   );
 }
+
+//Cleaning Timeouts
+function App() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setCount((prevCount) => prevCount + 1);
+    }, 3000);
+
+    // Cleanup function
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  return <div>Count: {count}</div>;
+}
+
