@@ -49,6 +49,17 @@ function Timer() {
   return <h1>I've rendered {count} times!</h1>;
 }
 
+//cleanup timer
+useEffect(() => {
+  let timerId = setTimeout(() => {
+    // do something     
+    timerId = null;
+  }, 3000);
+
+// cleanup the timmer when component unmout
+  return () => clearTimeout(timerId);
+}, []);
+
 
 //clean up useEffect(using return function)
 useEffect(() => {

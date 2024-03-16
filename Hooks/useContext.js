@@ -1,5 +1,4 @@
-import { func } from "prop-types";
-import React from "react";
+
 import { useContext, createContext } from "react";
 
 const themes = {
