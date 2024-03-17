@@ -1,5 +1,37 @@
-
+//simple one to avoid prop drilling
 import { useContext, createContext } from "react";
+const Context = createContext();
+
+const Child5 = () => {
+  const usingContext = useContext(Context);
+  return <>{usingContext.data}</>;
+};
+const Child4 = () => {
+  return <Child5 />;
+};
+const Child3 = () => {
+  return <Child4 />;
+};
+const Child2 = () => {
+  return <Child3 />;
+};
+const Child = () => {
+  return <Child2 />;
+};
+function App() {
+  return (
+    <>
+      <Context.Provider value={{ data: "Passing data" }}></Context.Provider>
+      <Child />
+    </>
+  );
+}
+
+export default App;
+
+//useContext for Theme
+import { useContext, createContext } from "react";
+import React from "react";
 
 const themes = {
   light: {
