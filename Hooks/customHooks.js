@@ -18,7 +18,7 @@ export default fetchurl;
 import useFetch from "./useFetch";
 
 const Home =() =>{
-    const data =useFetch{"https://jsonplaceholder.typicode.com"};
+    const data =fetch("https://jsonplaceholder.typicode.com");
 
     return(
         <>
