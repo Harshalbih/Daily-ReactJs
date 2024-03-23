@@ -1,31 +1,56 @@
 //useFetch.js
-import React from "react";
 import { useState, useEffect } from "react";
 
-const fetchurl = (url) =>{
-    const [data, setData] =useState(null);
+const useFetch = (url) => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    useEffect (() =>{
-        fetch(url)
-        .then((res)=>res.json())
-        .then((data)=> setData(data));
-    },[url]);
-    return [data];
-}
-export default fetchurl; 
+  useEffect(() => {
+    setLoading(true);
+    fetch(url)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setLoading(false);
+      });
+  }, [url]);
 
-//index.js
+  return { data, loading, error };
+};
+
+export default useFetch;
+
+//App.js
+
+import React from "react";
 import useFetch from "./useFetch";
 
-const Home =() =>{
-    const data =fetch("https://jsonplaceholder.typicode.com");
+export default function App() {
+  const { data, loading, error } = useFetch("https://jsonplaceholder.typicode.com/posts");
 
-    return(
-        <>
-        {data &&
-            data.map((item) =>{
-                return <p key={item.id}>{item.title}</p>
-            })}
-        </>
-    )
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  return (
+    <>
+      {data.map((item) => {
+        return <p key={item.id}>{item.title}</p>;
+      })}
+    </>
+  );
 }
