@@ -35,6 +35,19 @@ const cars = ['Ford', 'BMW', 'Audi'];
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render (<Garage cars={cars} />);
 
+//eg
+let a = 1;
+let b = 0;
+
+a &&= 2;
+console.log(a);
+// Expected output: 2
+
+b &&= 2;
+console.log(b);
+// Expected output: 0
+
+
 
 //Ternary Operator
 function MissedGoal(){
