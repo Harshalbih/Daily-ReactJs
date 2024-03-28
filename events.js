@@ -28,7 +28,7 @@ root.render(<football />)
             //events updated
             function focused() {
     var e=document.getElementById('inp');
-    if(confirm('Got it?')) {
+    if(confirm('Got em?')) {
         e.blur();
     }
 }
