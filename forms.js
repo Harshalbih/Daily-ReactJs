@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
 
 
-//Add a submit button and an event handler in the onSubmit attribute:
+//Add a submit button and an event handler in the onSubmit attribute::
 import {useState} from "react";
 import { ReactDOM } from "react";
 
