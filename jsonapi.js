@@ -24,7 +24,7 @@ function App() {
   return (
     
     <div className="App">
-     {err && "Error"}
+     {err && "Error Found"}
      {!err && userinfo.map((emp)=> <p key={emp.id}>{emp.id}</p>)}
      {!err && userinfo.map((emp)=> <p key={emp.title}>{emp.title}</p>)}
     </div>
