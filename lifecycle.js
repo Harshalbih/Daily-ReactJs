@@ -7,7 +7,6 @@ class Test extends React.Component {
 		super(props);
 		this.state = { hello : "World!" };
 	}
-//Lifecycle start
 	componentWillMount()
 	{
 		console.log("componentWillMount()");
