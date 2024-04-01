@@ -17,7 +17,7 @@ function Garage(){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Garage />);
 
-//Keyssssssss
+//Keys
 function car (props){
     return <li> Hey I'm car of a brand {props.brand}</li>
 }
