@@ -40,6 +40,6 @@ const Header= () =>{
 //Sass** (>npm i sass)
 $myColor: red;
 
-h1 {
+p {
   color: $myColor;
 }
