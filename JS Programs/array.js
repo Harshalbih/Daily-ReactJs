@@ -67,7 +67,7 @@ for (i = minnum; i < maxnum; i++) {
 }
 console.log(misarray);
 
-//Even odd
+//Even odd filter
 let array = [1, 2, 4, 3, 5, 7, 1, 3, 5, 7, 9];
 const odd = array.filter((item) => item % 2 === 1);
 console.log(odd);
