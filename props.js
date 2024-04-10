@@ -11,7 +11,7 @@ export default function App() {
   );
 }
 
-//profile.js props
+//profile.js 
 import React from "react";
 
 export default function Profile({ title, head }) {
