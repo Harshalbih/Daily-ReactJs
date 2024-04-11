@@ -18,6 +18,7 @@ import RestaurantMenu from "./component/RestaurantMenu"
                 - Search bar
                 - Restaurants List
                     - Restaurant card
+                        - Title
                         - Image
                         - Name
                         - Rating
