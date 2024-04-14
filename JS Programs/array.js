@@ -72,7 +72,7 @@ let array = [1, 2, 4, 3, 5, 7, 1, 3, 5, 7, 9];
 const odd = array.filter((item) => item % 2 === 1);
 console.log(odd);
 const even = array.filter((item) => item % 2 === 0);
-console.log(even);
+console.log(even);   
 
 //Intersection of two arrays
 let arr1 = [2, 4, 4, 6, 8, 9];
@@ -102,7 +102,7 @@ const assigned = Object.assign(...a.map((sr, name)=>({
 console.log(assigned);
 
 //count dups
-uniqueCount = ["a","b","c","d","d","e","a","b","c","f","g","h","h","h","e","a"];
+uniqueCount = ["a","b","c","d","d","e","a","b","c","f","g","h","h","h","e","a",'k'];
 var count = {};
 uniqueCount.forEach(function(i) { count[i] = (count[i]||0) + 1;});
 console.log(count);
