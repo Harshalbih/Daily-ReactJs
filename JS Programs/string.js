@@ -54,10 +54,17 @@ let str1 = "hubli hi";
 console.log(str1.substring(4,str1.length)) //will remove first four chars 
 console.log(str1.substring(str1.length-2)) //to remove last chars
 
-//Type Coercion
 
-let string = '44';
-let num = 44;
-let boolean = true;
-console.log(string+num); //4444
-console.log(boolean+num); //43
+// program to count the number of vowels in a string***************************
+const vowels = ["a", "e", "i", "o", "u"];
+function countVowel(str){
+  let count =0;
+  str = str.toLowerCase();
+  for (let i=0; i<str.length;i++){
+    if(vowels.includes(str[i])){
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countVowel("harshal"))
