@@ -68,3 +68,31 @@ function countVowel(str){
   return count;
 }
 console.log(countVowel("harshal"))
+
+//palindrom
+let palindrome = prompt("Enter Value")
+palindrome = palindrome.toLowerCase();
+
+let findpal= (str)=>{
+    let reversestr= str.split("").reverse().join("")
+    if(str===reversestr){
+        return true
+    }else{
+        return false;
+    }
+
+}
+console.log(findpal(palindrome))
+
+//Find occurence of letter in string
+
+let string = prompt("Enter string");
+let letter = prompt("Enter letter to count");
+let count = 0;
+
+for (let i = 0; i < string.length; i++) {
+  if (string[i] == letter) {
+    count++;
+  }
+}
+console.log(`In ${string} occurence of letter ${letter} is ${count} times`);

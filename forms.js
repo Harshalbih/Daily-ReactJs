@@ -1,82 +1,99 @@
-//Use the useState Hook to manage the input:
-import {useState} from "react";
-import { ReactDOM } from "react";
+i
+import { useState } from "react";
 
-function MyForm (){
-    const [name, setName] =useState("");
-
-    return(
-        <form>
-            <input type={text} value={name}
-            onChange={(event)=> setName(event.target.value)} />
-        </form>
-    )
-}
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<MyForm />);
-
-
-//Add a submit button and an event handler in the onSubmit attribute::
-import {useState} from "react";
-import { ReactDOM } from "react";
-
-function MyForm (){
-    const [name, setName] =useState("");
-
-    const handlerchange= (e) => {
-        e.preventDefault();
-        alert(`Name entered was ${name}`)
-    }   
-
-    return(
-        <form onSubmit={handlerchange}>
-            <input type={text} value={name}
-            onChange={(event)=> setName(event.target.value)} />
-            <input type="submit" />
-        </form>
-    )
-}
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<MyForm />);
-
-//select box, where the selected value "Volvo" is initialized in the constructor:
-function myForm (){
-    const [myCar, setMycar]= useState("volvo");
-
-    const handlerchange= (event) =>{
-        setMycar(event.target.value)
-    }
-
-    return(
-        <form>
-            <select value={myCar} onChange={handlerchange}>
-                <option value="ford">ford</option>
-                <option value="volvo">volvo</option>
-                <option value="lambo">lambo</option>
-            </select>
-        </form>
-    )
-}
-
-//Form revise. Unlinked from above.
-import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-
-function MyForm() {
+export default function App() {
   const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const [mychoice, setMychoice] = useState("");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert(`your name is ${name} and age is ${age} and car is ${mychoice}`);
+  }
 
   return (
-    <form>
-      <label>Enter your name:
-        <input
-          type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-    </form>
-  )
+    <div className="App">
+      <form onSubmit={handleSubmit}>
+        <label>
+          name
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <label>
+          Age
+          <input
+            type="number"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+          />
+        </label>
+        <select value={mychoice} onChange={(e) => setMychoice(e.target.value)}>
+          <option value="Baleno">Baleno</option>
+          <option value="siaz">Siaz</option>
+          <option value="lambo">Lambo</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<MyForm />);
+//Capgemini interview question on checkbox
+import "./styles.css";
+import { useState } from "react";
+
+export default function App() {
+  const [checkedCount, setCheckedCount] = useState(0);
+
+  const handleCheckboxChange = () => {
+    setCheckedCount((prevCount) => prevCount + 1);
+  };
+
+  return (
+    <div>
+      <label>
+        <input
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          disabled={checkedCount === 3}
+        />
+        Checkbox 1
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          disabled={checkedCount === 3}
+        />
+        Checkbox 2
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          disabled={checkedCount === 3}
+        />
+        Checkbox 3
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          disabled={checkedCount === 3}
+        />
+        Checkbox 4
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          disabled={checkedCount === 3}
+        />
+        Checkbox 5
+      </label>
+    </div>
+  );
+}
