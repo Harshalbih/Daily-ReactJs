@@ -41,7 +41,7 @@ export default function App() {
   );
 }
 
-//Capgemini interview question on checkbox
+//Capgemini interview question on checkbox(3 max)
 import "./styles.css";
 import { useState } from "react";
 
