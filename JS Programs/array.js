@@ -38,6 +38,19 @@ let array = [1, 3, 5, 7, 1, 3, 5, 7, 9];
 const dups = array.filter((ele, index, arr) => arr.indexOf(ele) !== index);
 console.log(dups);
 
+//count dups
+uniqueCount = ["a","b","c","d","d","e","a","b","c","f","g","h","h","h","e","a",'k'];
+let count ={};
+for(let i =0; i<arr.length;i++){
+  let item = arr[i];
+  if(count[item]){
+    count[item]= count[item]+1;
+  }else{
+    count[item]=1;
+  }
+}
+console.log(obj);
+
 //Max number in array
 let array = [1, 3, 5, 7, 1, 3, 5, 7, 9];
 let maxnum = array.reduce((pre, curr) => (curr > pre ? curr : pre));
@@ -61,7 +74,7 @@ let misarray = [];
 let maxnum = Math.max(...array);
 let minnum = Math.min(...array);
 for (i = minnum; i < maxnum; i++) {
-  if (array.indexOf(i) < 0) {
+  if (array.indexOf(i) === -1) {
     misarray.push(i);
   }
 }
@@ -73,6 +86,20 @@ const odd = array.filter((item) => item % 2 === 1);
 console.log(odd);
 const even = array.filter((item) => item % 2 === 0);
 console.log(even);   
+
+//sort an array
+var Arr = [1, 7, 2, 8, 3, 4, 5, 0, 9];
+
+for (var i = 1; i < Arr.length; i++)
+    for (var j = 0; j < i; j++)
+        if (Arr[i] < Arr[j]) {
+            var x = Arr[i];
+            Arr[i] = Arr[j];
+            Arr[j] = x;
+        }
+
+console.log(Arr);
+
 
 //Intersection of two arrays
 let arr1 = [2, 4, 4, 6, 8, 9];
@@ -91,8 +118,29 @@ let union = [...arr1, ...arr2];
 
 console.log([...new Set(union)]);
 
+//Merge two array with spread
+const arr=[1,5,10,45]
+const arr1=[101,456,78,15]
 
-//object assign
+let result= [...arr,...arr1]
+console.log(result)
+let sortarray = result.sort(function(x,y){
+    return x-y;
+})
+console.log(sortarray);
+
+//merge two array with concat
+const arr2=[1,5,10,45]
+const arr3=[101,456,78,15]
+ 
+let merged= arr2.concat(arr3)
+let sorted= merged.sort((a,b)=> {
+    return a-b;
+})
+console.log(sorted)
+//o/p [1, 5, 10, 15, 45, 78, 101, 456]
+
+//object assign array to object
 let a = [1,2,3,4];
 let b = ["shubham", "Aniket", "Harshal", "Vipin"]
 
@@ -100,22 +148,11 @@ const assigned = Object.assign(...a.map((sr, name)=>({
                   [sr]:b[name]
 })))
 console.log(assigned);
+//output {1: 'shubham', 2: 'Aniket', 3: 'Harshal', 4: 'Vipin'}
 
-//count dups
-uniqueCount = ["a","b","c","d","d","e","a","b","c","f","g","h","h","h","e","a",'k'];
-var count = {};
-uniqueCount.forEach(function(i) { count[i] = (count[i]||0) + 1;});
-console.log(count);
+//obj to array
+let obj = { name: 'John', age: 30, city: 'New York' };
 
-//sort an array
-var Arr = [1, 7, 2, 8, 3, 4, 5, 0, 9];
-
-for (var i = 1; i < Arr.length; i++)
-    for (var j = 0; j < i; j++)
-        if (Arr[i] < Arr[j]) {
-            var x = Arr[i];
-            Arr[i] = Arr[j];
-            Arr[j] = x;
-        }
-
-console.log(Arr);
+let arr = Object.entries(obj);
+console.log(arr);
+// Output: [['name', 'John'], ['age', 30], ['city', 'New York']]
