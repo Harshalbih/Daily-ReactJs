@@ -96,3 +96,13 @@ for (let i = 0; i < string.length; i++) {
   }
 }
 console.log(`In ${string} occurence of letter ${letter} is ${count} times`);
+
+//String to array
+const data= "dlehi, mumbai, pune";
+const toarr= data.split(',')
+console.log(toarr);
+
+//array to string
+const adata = ['delhi', 'mumbai', 'pune'];
+const tostring = adata.join(',')
+console.log(tostring);

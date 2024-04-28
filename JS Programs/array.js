@@ -156,3 +156,24 @@ let obj = { name: 'John', age: 30, city: 'New York' };
 let arr = Object.entries(obj);
 console.log(arr);
 // Output: [['name', 'John'], ['age', 30], ['city', 'New York']]
+
+//Right angle pattern
+for(let i=0; i<=6; i++){
+  for(let j=1; j<i; j++){
+      document.write("*")
+  }
+  document.write("<br>")
+}
+
+//rotate element from last for n times
+let arr = [5,4,3,2,1,7];
+n=4;
+function rotate(array, num){
+    for(let i=0; i<num; i++){
+        let removed = array.pop();
+        array.unshift(removed);
+        
+    }
+    return array;
+}
+console.log(rotate(arr, n));
