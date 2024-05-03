@@ -10,6 +10,7 @@ const task = new Promise(async (resolve, reject) => {
     }, 2000);
   } catch (error) {
     reject(error);
+    console.log(error)
   }
 });
 
