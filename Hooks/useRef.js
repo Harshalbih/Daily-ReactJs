@@ -25,7 +25,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
-//useRef to acceess DOM directly
+//useRef to acceess DOM directly*
 
 import { useRef } from "react";
 import ReactDOM from "react-dom/client";
