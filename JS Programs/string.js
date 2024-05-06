@@ -3,20 +3,19 @@ let str = "Harshal";
 let splitstr = str.split("");
 let reversestr = splitstr.reverse();
 let joinstr = reversestr.join("");
-console.log(joinstr);
+console.log(joinstr);     "lahsraH"
 
 let str1 = "hubli";
 let rev = str1.split("").reverse().join("");
-console.log(rev);
-
+console.log(rev);    //"ilbuh"
+   
 //Reverse using for loop
-let str = prompt("enter string");
-
+let str = "harshal";
 let newstring = "";
 for (let i = str.length - 1; i >= 0; i--) {
   newstring += str[i];
 }
-console.log(newstring);
+console.log(newstring);  //"lahsrah"
 
 //Check if two string match with string chars
 let str1= "harshal";
@@ -28,11 +27,10 @@ function strmatch(val1, val2){
   if (arr1===arr2) return true
   else return false;
 }
-strmatch(str1, str2);
+strmatch(str1, str2);   //true
 
 //check count of repeated elements in array
 let arr= ["aa", "bb", "cc", "aa", "bb"];
-
 let obj ={};
 for(let i =0; i<arr.length;i++){
   let item = arr[i];
@@ -42,7 +40,7 @@ for(let i =0; i<arr.length;i++){
     obj[item]=1;
   }
 }
-console.log(obj);
+console.log(obj);   //{aa: 2,bb: 2,cc: 1}
 
 //Make first string uppercase
 function capitalizeFirstLetter(string) {
@@ -51,8 +49,8 @@ function capitalizeFirstLetter(string) {
 
 //To remove specific character
 let str1 = "hubli hi";
-console.log(str1.substring(4,str1.length)) //will remove first four chars 
-console.log(str1.substring(str1.length-2)) //to remove last chars
+console.log(str1.substring(4,str1.length)) //will remove first four chars  //"i hi"
+console.log(str1.substring(str1.length-2)) //to remove last chars   "hi"
 
 
 // program to count the number of vowels in a string***************************
@@ -67,7 +65,7 @@ function countVowel(str){
   }
   return count;
 }
-console.log(countVowel("harshal"))
+console.log(countVowel("harshal"))  //2
 
 //palindrom
 let palindrome = prompt("Enter Value")
@@ -82,7 +80,7 @@ let findpal= (str)=>{
     }
 
 }
-console.log(findpal(palindrome))
+console.log(findpal(palindrome))  //true || false
 
 //Find occurence of letter in string
 
@@ -100,9 +98,9 @@ console.log(`In ${string} occurence of letter ${letter} is ${count} times`);
 //String to array
 const data= "dlehi, mumbai, pune";
 const toarr= data.split(',')
-console.log(toarr);
+console.log(toarr);      //["dlehi", " mumbai", " pune"]
 
 //array to string
 const adata = ['delhi', 'mumbai', 'pune'];
 const tostring = adata.join(',')
-console.log(tostring);
+console.log(tostring);      //"delhi,mumbai,pune"
