@@ -177,3 +177,12 @@ function rotate(array, num){
     return array;
 }
 console.log(rotate(arr, n));
+
+//Flattern an array
+let array = [1,4,5,[5,9],6,[4,3,2]]
+
+let flatarray = array.flat();
+console.log(flatarray)
+//or
+let flatArray = [].concat(...arr);
+console.log(flatArray)
