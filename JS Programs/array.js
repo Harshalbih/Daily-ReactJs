@@ -98,7 +98,7 @@ let arr2 = [2, 4, 7, 8, 8, 5];
 let intersect = arr1.filter((ele) => {
   return arr2.includes(ele);
 });
-console.log([...new Set(intersect)]);
+console.log([...new Set(intersect)]);  //[2, 4, 8]
 
 //Union of array
 let arr1 = [2, 4, 4, 6, 8, 9];
@@ -106,7 +106,7 @@ let arr2 = [2, 4, 7, 8, 8, 5];
 
 let union = [...arr1, ...arr2];
 
-console.log([...new Set(union)]);
+console.log([...new Set(union)]);  //[2, 4, 6, 8, 9, 7, 5]
 
 //Merge two array with spread
 const arr=[1,5,10,45]
@@ -176,3 +176,7 @@ console.log(flatarray)     //[1, 4, 5, 5, 9, 6, 4, 3, 2]
 //or 
 let flatArray = [].concat(...arr);
 console.log(flatArray)     //[1, 4, 5, 5, 9, 6, 4, 3, 2]
+
+//Shuffle an arrray
+const shuffledArr = arr => arr.sort(()=> Math.random() - 0.5);
+console.log(shuffledArr([3,5,6,3,2,45,3,2,4])); //shuffled

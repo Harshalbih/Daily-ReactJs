@@ -1,20 +1,14 @@
-const num= prompt("enter number");
-for (let i=0; i<=num; i++){
-    if(num%i==0){
-        console.log(i);
-    }
-}
 
 //unique way
-function factorial(number) { 
+function factorial(num) { 
 
-    if (number === 0 || number === 1) { 
+    if (num === 0 || num === 1) { 
   
       return 1; 
   
     } else { 
   
-      return number * factorial(number – 1); 
+      return num * factorial(num -1); 
   
     } 
   

@@ -104,3 +104,7 @@ console.log(toarr);      //["dlehi", " mumbai", " pune"]
 const adata = ['delhi', 'mumbai', 'pune'];
 const tostring = adata.join(',')
 console.log(tostring);      //"delhi,mumbai,pune"
+
+//Anagram checker
+const isAnagram = (str1, str2) => [...str1.toLowerCase()].sort().join('') === [...str2.toLowerCase()].sort().join('');
+console.log(isAnagram('listen','silent')) //true

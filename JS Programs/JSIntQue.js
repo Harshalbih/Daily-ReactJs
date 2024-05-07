@@ -1,28 +1,41 @@
-//Merge two arrays and remove duplicate
-const mergeArr = (arr1,arr2) => [...new Set([...arr1, ...arr2])];
-console.log(mergeArr([1,2,3],[4,2,3]))
+       //Debouncing
+//**Define the debounce function
+function debounce(func, delay) { 
+    let timer; 
+    return function() { 
+        clearTimeout(timer); 
+        timer = setTimeout(func, delay); 
+    }; 
+}
+// Example function to be debounced
+function myFunction() {
+    console.log('Executing debounced function...');
+}
+// Debounce the function with a delay of 500 milliseconds
+const debouncedFunction = debounce(myFunction, 500);
+// Call the debounced function
+debouncedFunction();
 
-//Anagram checker
-const isAnagram = (str1, str2) => [...str1.toLowerCase()].sort().join('') === [...str2.toLowerCase()].sort().join('');
-console.log(isAnagram('listen','silent'));
+//**Implement a deep clone function in JavaScript that creates a copy of a nested object or array without any reference to the original. 
+function deepClone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+  }
+  // Example usage
+  const originalObj = {
+    name: "John",
+    age: 30,
+    address: {
+      city: "New York",
+      country: "USA"
+    },
+    hobbies: ["reading", "traveling"]
+  };
+  const clonedObj = deepClone(originalObj);
+  // Modifying the cloned object
+  clonedObj.name = "Alice";
+  clonedObj.address.city = "Los Angeles";
+  clonedObj.hobbies.push("painting");
+  console.log("Original Object:", originalObj);
+  console.log("Cloned Object:", clonedObj);
 
-//Shuffle an arrray
-const shuffledArr = arr => arr.sort(()=> Math.random() - 0.5);
-console.log(shuffledArr([3,5,6,3,2,45,3,2,4]));
-
-//Max number
-const maxNum = arr => Math.max(...arr);
-console.log(maxNum([98,76,34,21,12]));
-
-//if object is empty
-const ifObjEmpt = obj => Object.keys(obj).length === 0;
-console.log(ifObjEmpt({}));
-
-//check if all elements in array satisfy condition
-const arrElem = (arr, condition) => arr.every(condition);
-console.log(arrElem([2,4,3,6], num => num % 2 === 0));
-
-//avg number of arr
-const avgNum = arr => arr.reduce((sum, num)=> sum + num, 0)/arr.length;
-console.log(avgNum([2,3,4,54,3,22]))
-
+  
