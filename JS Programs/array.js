@@ -142,6 +142,11 @@ let obj = { name: 'John', age: 30, city: 'New York' };
 let arr = Object.entries(obj);
 console.log(arr);    // [['name', 'John'], ['age', 30], ['city', 'New York']]
 
+//Assign Attribute to obj in arr
+let arr=[{id: 1, name:"Test", class:'classobj'}]
+let newprop= arr[0].age=27;
+console.log(arr)        //[{age: 27,class: "classobj",id: 1,name: "Test"}]
+
 //Right angle pattern
 for(let i=0; i<=6; i++){
   for(let j=1; j<i; j++){
