@@ -16,6 +16,7 @@ const debouncedFunction = debounce(myFunction, 500);
 // Call the debounced function
 debouncedFunction();
 
+
 //**Implement a deep clone function in JavaScript that creates a copy of a nested object or array without any reference to the original. 
 function deepClone(obj) {
     return JSON.parse(JSON.stringify(obj));
@@ -39,3 +40,12 @@ function deepClone(obj) {
   console.log("Cloned Object:", clonedObj);
 
   
+  //Tricky question
+  function sum(num1, num2){
+    "use strict"
+    num1=100;
+    num2=200;
+    return arguments[0]+arguments[1];
+  }
+  sum(10,10);
+  //output 20 /// it would be 300 if we don't add usestrict because params will overrider arguments in js
