@@ -1,4 +1,4 @@
-//glob logic
+//**glob logic**
 
 //Find Intersection of Arrays : Write a function that takes two arrays as input and returns an array containing the intersection of the two arrays (elements that appear in both arrays).
 //Eg: Input: arr1 = [1,3, 10,10,2], arr2 = [4,10,1,5,6,7], Output: arr= [1, 10]
@@ -16,7 +16,7 @@ function intersection(arr1, arr2){
 console.log(intersection(arr1, arr2))
 
 //Complete the function reverseString(), which accepts a string as its parameter, reverses it, and returns the string.
-//Note - Do not use any loop in implementation.
+//Note - Do not use any loop in implementation
 
 function reverseString(str){
     let revStr = str.split("").reverse().join("");
