@@ -71,7 +71,7 @@ for (i = minnum; i < maxnum; i++) {
 console.log(misarray);    //[2, 4, 6, 8]
 
 //Even odd filter
-let array = [1, 2, 4, 3, 5, 7, 1, 3, 5, 7, 9];
+let array = [1, 2, 4, 3, 5, 7, 1, 3, 5, 7, 9];  
 const odd = array.filter((item) => item % 2 === 1);
 console.log(odd);                                       //[1, 3, 5, 7, 1, 3, 5, 7, 9]
 const even = array.filter((item) => item % 2 === 0);
@@ -147,13 +147,6 @@ let arr=[{id: 1, name:"Test", class:'classobj'}]
 let newprop= arr[0].age=27;
 console.log(arr)        //[{age: 27,class: "classobj",id: 1,name: "Test"}]
 
-//Right angle pattern
-for(let i=0; i<=6; i++){
-  for(let j=1; j<i; j++){
-      document.write("*")
-  }
-  document.write("<br>")
-}
 
 //rotate element from last for n times
 let arr = [5,4,3,2,1,7];
@@ -180,3 +173,9 @@ console.log(flatArray)     //[1, 4, 5, 5, 9, 6, 4, 3, 2]
 //Shuffle an arrray
 const shuffledArr = arr => arr.sort(()=> Math.random() - 0.5);
 console.log(shuffledArr([3,5,6,3,2,45,3,2,4])); //shuffled
+
+//Empty an array
+let arr =[1, 4, 5, 5, 9, 6, 4, 3, 2];
+arr.length=0;         //or arr.splice(0, arr.length)
+console.log(arr) //[]
+
