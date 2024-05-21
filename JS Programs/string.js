@@ -17,6 +17,16 @@ for (let i = str.length - 1; i >= 0; i--) {
 }
 console.log(newstring);  //"lahsrah"
 
+// Reverse each word in string
+function reversestr(str){
+  let splitstr = str.split(" ");
+  const strrev= splitstr.map((word)=>{
+    return word.split("").reverse().join("")  
+  })
+  return strrev.join(" ")
+}
+reversestr("harshal is a good boy");   //"lahsrah si a doog yob"
+
 //Check if two string match with string chars
 let str1= "harshal";
 let str2 = "ahshral";

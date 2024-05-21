@@ -179,3 +179,9 @@ let arr =[1, 4, 5, 5, 9, 6, 4, 3, 2];
 arr.length=0;         //or arr.splice(0, arr.length)
 console.log(arr) //[]
 
+//swap variable
+let a = prompt("Enter first var");
+let b = prompt("Enter second var");
+[a, b] = [b, a];
+console.log(a);
+console.log(b); 
