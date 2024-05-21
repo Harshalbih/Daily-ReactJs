@@ -1,4 +1,4 @@
-//**glob logic**
+//**glob logic**1st round
 
 //Find Intersection of Arrays : Write a function that takes two arrays as input and returns an array containing the intersection of the two arrays (elements that appear in both arrays).
 //Eg: Input: arr1 = [1,3, 10,10,2], arr2 = [4,10,1,5,6,7], Output: arr= [1, 10]
@@ -57,3 +57,19 @@ function demo() {
   console.log(a) 
   console.log(b) 
   console.log(c) 
+
+//**glob logic**2nd round
+const input = [1.1, 1.3, 2.1, 2.5, 2.7, 4.1];
+const output = {};
+
+for (let i = 0; i < input.length; i++) {
+    const num = input[i];
+    const key = Math.floor(num);
+    if (!output[key]) {
+      output[key] = [];
+    }
+    output[key].push(num);
+  }
+  
+
+console.log(output);   // {1:[1.1,1.3], 2:[2.1,2.5,2.7], 4:[4.1]}
