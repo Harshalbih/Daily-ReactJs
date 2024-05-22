@@ -16,6 +16,48 @@ const debouncedFunction = debounce(myFunction, 500);
 // Call the debounced function
 debouncedFunction();
 
+//debounce using loadash 
+const btn= document.querySelector(".increment-btn")
+const btnpress= document.querySelector(".increment-pressed")
+const count= document.querySelector(".increment-count")
+
+var pressedCount=0;
+var triggerCount=0;
+
+const debouncedCount = _.debounce(()=>{
+  count.innerHTML = ++triggerCount
+},800)
+
+btn.addEventListener("click", ()=>{
+  btnpress.innerHTML = ++pressedCount;
+  debouncedCount()
+});
+
+//HTML for both
+<div>
+  <div>
+    <button class="increment-btn">Increment</button>
+    <button class="increment-pressed">Pressed</button>
+    <p class="increment-count">0</p>
+  </div>
+</div>
+
+//throttle using loadash
+const btn= document.querySelector(".increment-btn")
+const btnpress= document.querySelector(".increment-pressed")
+const count= document.querySelector(".increment-count")
+
+var pressedCount=0;
+var triggerCount=0;
+
+const thottleCount = _.throttle(()=>{
+  count.innerHTML = ++triggerCount
+},800)
+
+btn.addEventListener("click", ()=>{
+  btnpress.innerHTML = ++pressedCount;
+  thottleCount()
+});
 
 //**Implement a deep clone function in JavaScript that creates a copy of a nested object or array without any reference to the original. 
 function deepClone(obj) {
