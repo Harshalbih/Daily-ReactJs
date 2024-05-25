@@ -1,0 +1,27 @@
+{
+  "name": "daily-react",
+  "version": "1.0.0",
+  "description": "Intend of this repo is to track my daily react activities and practices.",
+  "main": "Pagination.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harshalbih/Daily-React.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harshalbih/Daily-React/issues"
+  },
+  "homepage": "https://github.com/Harshalbih/Daily-React#readme",
+  "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}

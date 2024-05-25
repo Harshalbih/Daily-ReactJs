@@ -41,6 +41,7 @@ btn.addEventListener("click", ()=>{
     <p class="increment-count">0</p>
   </div>
 </div>
+//<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
 //throttle using loadash
 const btn= document.querySelector(".increment-btn")
