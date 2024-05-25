@@ -30,7 +30,7 @@ export default function App() {
       {err && "Error: Not found"}
       {loading && "Loading....."}
       {!loading &&
-        products?.map((value) => {
+        products?.map((val) => {
           return (
             <>
               <p key={val.id}> {val.title}</p>
@@ -59,4 +59,3 @@ function App() {
 
   return <div>Count: {count}</div>;
 }
-
