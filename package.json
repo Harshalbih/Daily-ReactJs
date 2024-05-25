@@ -5,7 +5,7 @@
   "main": "Pagination.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
