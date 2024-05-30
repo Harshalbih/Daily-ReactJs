@@ -40,10 +40,10 @@ console.log(countEven(24680)); // Output: 5
 
 //Output base
 //
-console.log(j);
+console.log(j); //10
 Demo();
 function Demo() {
-   console.log(i);
+   console.log(i); //output undefined
    var i = 20;
 }
 var j = 10;
@@ -54,7 +54,7 @@ function demo() {
     var c = 12;
   }
   demo()
-  console.log(a) 
+  console.log(a) //will stop here with error: ReferenceError: a is not defined
   console.log(b) 
   console.log(c) 
 
