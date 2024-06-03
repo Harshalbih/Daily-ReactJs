@@ -19,7 +19,7 @@ console.log
 
 //debounce using loadash 
 const btn= document.querySelector(".increment-btn")
-const btnpress= document.querySelector(".increment-pressed")
+const btnpress= document.querySelector(".increment-press")
 const count= document.querySelector(".increment-count")
 
 var pressedCount=0;
