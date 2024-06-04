@@ -129,25 +129,6 @@ let sorted= merged.sort((a,b)=> {
 })
 console.log(sorted)   //[1, 5, 10, 15, 45, 78, 101, 456]
 
-//object assign array to object
-let a = [1,2,3,4];
-let b = ["shubham", "Aniket", "Harshal", "Vipin"]
-const assigned = Object.assign(...a.map((sr, name)=>({
-                  [sr]:b[name]
-})))
-console.log(assigned);   // {1: 'shubham', 2: 'Aniket', 3: 'Harshal', 4: 'Vipin'}
-
-//obj to array
-let obj = { name: 'John', age: 30, city: 'New York' };
-let arr = Object.entries(obj);
-console.log(arr);    // [['name', 'John'], ['age', 30], ['city', 'New York']]
-
-//Assign Attribute to obj in arr
-let arr=[{id: 1, name:"Test", class:'classobj'}]
-let newprop= arr[0].age=27;
-console.log(arr)        //[{age: 27,class: "classobj",id: 1,name: "Test"}]
-
-
 //rotate element from last for n times
 let arr = [5,4,3,2,1,7];
 n=4;
@@ -185,3 +166,19 @@ let b = prompt("Enter second var");
 [a, b] = [b, a];
 console.log(a);
 console.log(b); 
+
+//Array to chunks
+function chunk(arr, size) {
+  let result = [];
+
+  while (arr.length > 0) {
+      // Remove the first 'size' elements from the array and add them to the result
+      result.push(arr.splice(0, size));
+  }
+
+  return result;
+}
+
+console.log(chunk([1, 2, 3, 4, 5], 2)); // [[1, 2], [3, 4], [5]]
+console.log(chunk([1, 2, 3, 4, 5], 1)); // [[1], [2], [3], [4], [5]]
+console.log(chunk([1, 2, 3, 4, 5], 3)); // [[1, 2, 3], [4, 5]]

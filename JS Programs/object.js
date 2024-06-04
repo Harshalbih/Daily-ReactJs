@@ -1,3 +1,22 @@
+//object assign array to object
+let a = [1,2,3,4];
+let b = ["shubham", "Aniket", "Harshal", "Vipin"]
+const assigned = Object.assign(...a.map((sr, name)=>({
+                  [sr]:b[name]
+})))
+console.log(assigned);   // {1: 'shubham', 2: 'Aniket', 3: 'Harshal', 4: 'Vipin'}
+
+//obj to array
+let obj = { name: 'John', age: 30, city: 'New York' };
+let arr = Object.entries(obj);
+console.log(arr);    // [['name', 'John'], ['age', 30], ['city', 'New York']]
+
+//Assign Attribute to obj in arr
+let arr=[{id: 1, name:"Test", class:'classobj'}]
+let newprop= arr[0].age=27;
+console.log(arr)        //[{age: 27,class: "classobj",id: 1,name: "Test"}]
+
+//Objects with hof
 let car = [{
     "color": "red",
     "type": "cabrio",
@@ -52,3 +71,5 @@ let car = [{
     return crr + acc.capacity;
   },0)
   console.log(reduced);
+
+  
