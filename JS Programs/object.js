@@ -16,6 +16,50 @@ let arr=[{id: 1, name:"Test", class:'classobj'}]
 let newprop= arr[0].age=27;
 console.log(arr)        //[{age: 27,class: "classobj",id: 1,name: "Test"}]
 
+//**object**
+// Example usage
+const user = {
+  name: "John",
+  age: 30,
+  address: {
+    city: "New York",
+    country: "USA"
+  },
+  hobbies: ["reading", "traveling"],
+  "likes to eat": "pizza", //added property with spaces
+  age: 20 //if there are 2 keys with same name "age" it will replace first key and will give o/p of 20 at the place of age;
+};
+
+delete user.age;
+console.log( user) //{address: {city: "New York",country: "USA"},hobbies: ["reading", "traveling"],name: "John"}
+
+//to access likes to eat property
+console.log(user["likes to eat"])
+
+//iterate over keys
+for(key in user){
+  console.log(user[key]); //output  "pizza" "John"{city: "New York",country: "USA"}["reading", "traveling"]"pizza"  
+} 
+
+//JSON.strigify vs JSON.parse
+const user1 = {
+  name:'Harshal',
+  age: 27
+}
+const strobj=  JSON.stringify(user1) //converts to an string
+console.log(strobj) //output {"name":"Harshal","age":27}
+console.log(JSON.parse(strobj)) //converts to an object
+
+//destructuring object
+const user2 = {
+  name: "John",
+  age: 30
+}
+const { name }=user2; 
+console.log(name);  //"John"
+
+
+
 //Objects with hof
 let car = [{
     "color": "red",
