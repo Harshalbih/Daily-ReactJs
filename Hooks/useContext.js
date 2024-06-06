@@ -2,23 +2,7 @@
 import { useContext, createContext } from "react";
 const Context = createContext();
 
-const Child5 = () => {
-  const usingContext = useContext(Context);
-  return <>{usingContext.data}</>;
-};
-const Child4 = () => {
-  return <Child5 />;
-};
-const Child3 = () => {
-  return <Child4 />;
-};
-const Child2 = () => {
-  return <Child3 />;
-};
-const Child = () => {
-  return <Child2 />;
-};
-function App() {
+export default function App() {
   return (
     <>
       <Context.Provider value={{ data: "Passing data" }}></Context.Provider>
@@ -26,8 +10,22 @@ function App() {
     </>
   );
 }
-
-export default App;
+const Child = () => {
+  return <Child2 />;
+};
+const Child2 = () => {
+  return <Child3 />;
+};
+const Child3 = () => {
+  return <Child4 />;
+};
+const Child4 = () => {
+  return <Child5 />;
+};
+const Child5 = () => {
+  const usingContext = useContext(Context);
+  return <>{usingContext.data}</>;
+};
 
 //useContext for Theme
 import { useContext, createContext } from "react";

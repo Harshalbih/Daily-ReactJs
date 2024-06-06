@@ -18,3 +18,15 @@ task
   .then((data) => console.log("success", data))
   .catch((error) => console.log("error", error))
   .finally(() => console.log("finally"));
+
+
+  const promise = new Promise((resolve, reject=>{
+    let age = 28;
+    if(age > 18) {
+      resolve("You are eligible to vote");
+      } else {
+        reject("You are not eligible to vote");
+        }
+  }))
+  promise.then((message)=>console.log(message))
+  .catch((message)=>console.log(message));

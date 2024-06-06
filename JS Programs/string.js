@@ -118,3 +118,14 @@ console.log(tostring);      //"delhi,mumbai,pune"
 //Anagram checker
 const isAnagram = (str1, str2) => [...str1.toLowerCase()].sort().join('') === [...str2.toLowerCase()].sort().join('');
 console.log(isAnagram('listen','silent')) //true
+
+//loop capitalize first letter
+function capitalize(string){
+  let str= string.split(" ")
+  for(let i=0;i<str.length;i++){
+    str[i]=str[i].charAt(0).toUpperCase() +
+    str[i].slice(1);
+  }
+  return str.join(" ")
+}
+console.log(capitalize("hello man")) //Hello Man
