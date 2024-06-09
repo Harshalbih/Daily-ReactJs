@@ -10,7 +10,7 @@ const dupl= arrayd.filter(function (item, pos) {
   });
 console.log(dupl);  //[1, 2, 3, 4]
 
-//or
+//or using loop
 const array = [1, 1, 2, 2, 3, 4];
 function dupl(array) {
   let uniqueArray = [];
