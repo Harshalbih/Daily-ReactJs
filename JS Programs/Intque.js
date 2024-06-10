@@ -73,3 +73,35 @@ for (let i = 0; i < input.length; i++) {
   
 
 console.log(output);   // {1:[1.1,1.3], 2:[2.1,2.5,2.7], 4:[4.1]}
+
+/* Quest global*/
+// ensure that the handleClick function in the Parent component is called when the button in the Child component is clicked, 
+// you need to pass the handleClick function correctly as a prop to the Child component and use it properly in the Child component.
+
+//parent
+import React from 'react';
+import Child from './Child';
+function Parent() {
+    let message = 'Hi user';
+
+    const handleClick = () => {
+        console.log(message); // Corrected to log the message variable
+    };
+
+    return (
+        <Child handleClick={handleClick} />
+    );
+}
+
+export default Parent;
+
+//child
+import React from 'react';
+
+function Child({ handleClick }) { // Destructured to get handleClick from props
+    return (
+        <button onClick={handleClick}>Click Here</button>
+    );
+}
+
+export default Child;
