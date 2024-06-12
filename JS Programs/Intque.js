@@ -105,3 +105,47 @@ function Child({ handleClick }) { // Destructured to get handleClick from props
 }
 
 export default Child;
+
+//adeption.io
+//countdown of a input number till 0 by 1 second interval
+import React, { useState, useEffect } from "react";
+
+function Countdown() {
+  const [inputNumber, setInputNumber] = useState(0);
+  const [number, setNumber] = useState(null);
+
+  useEffect(() => {
+    let timer = setInterval(() => {
+        setNumber((prevNumber) => prevNumber - 1);
+      }, 1000);
+
+    return () => clearInterval(timer);
+  }, [number]);
+
+  const handleInputChange = (e) => {
+    setInputNumber(Number(e.target.value));
+  };
+
+  const startCountdown = () => {
+    setNumber(inputNumber);
+  };
+
+  return (
+    <div>
+      <input
+        type="number"
+        value={inputNumber}
+        onChange={handleInputChange}
+        placeholder="Enter a number"
+      />
+      <button onClick={startCountdown}>Start Countdown</button>
+      <h1>
+        Countdown:{" "}
+        { number}
+      </h1>
+    </div>
+  );
+}
+
+export default Countdown;
+
