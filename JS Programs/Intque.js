@@ -98,7 +98,7 @@ export default Parent;
 //child
 import React from 'react';
 
-function Child({ handleClick }) { // Destructured to get handleClick from props
+function Child({ handleClick }) { //Destructured to get handleClick from props
     return (
         <button onClick={handleClick}>Click Here</button>
     );
