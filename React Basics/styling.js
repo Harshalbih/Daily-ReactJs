@@ -43,3 +43,12 @@ $myColor: red;
 p {
   color: $myColor;
 }
+
+//dynamic class
+const Button =  () => {
+  const [className, setClassName] = React.useState("foo");
+
+  return (
+    <button className={className} onClick={() => setClassName("bar")}>Clicking this will change the class name from "foo" to "bar"</button>
+  );
+};
