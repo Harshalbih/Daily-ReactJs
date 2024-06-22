@@ -22,11 +22,15 @@ export default function Profile({ title, head }) {
     </div>
   );
 }
-
-
-
-
-
+//or
+export default function Profile(props) {
+  return (
+    <div>
+      <div>title is {props.title}</div>
+      <div> head is {props.head} </div>
+    </div>
+  );
+}
 
 
 //Send the "brand" property from the Garage component to the Car component:
@@ -42,10 +46,6 @@ function Garage() {
     </>
   );
 }
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Garage />);
-
-
 
 //Create a variable named carName and send it to the Car component:
 function Car(props) {
@@ -61,10 +61,6 @@ function Garage() {
     </>
   );
 }
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Garage />);
-
-
 
 //Create an object named carInfo and send it to the Car component:
 function Car(props) {
