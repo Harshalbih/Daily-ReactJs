@@ -15,7 +15,7 @@ function myFunction() {
 const debouncedFunction = debounce(myFunction, 500);
 // Call the debounced function
 debouncedFunction();
-console.log
+
 
 //debounce using loadash 
 const btn= document.querySelector(".increment-btn")
