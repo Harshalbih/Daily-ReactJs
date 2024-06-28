@@ -161,4 +161,3 @@ function getNthMax(arr1, arr2, n) {
 
 const n = 1; // For the maximum value
 console.log(getNthMax(arr1, arr2, n)); // Output: 55
-
