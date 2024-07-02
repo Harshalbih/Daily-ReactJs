@@ -161,3 +161,35 @@ function getNthMax(arr1, arr2, n) {
 
 const n = 1; // For the maximum value
 console.log(getNthMax(arr1, arr2, n)); // Output: 55
+
+//Deloitte 
+//Count dupl from arr
+let array= [1, 1, 3, 4, 5, 6, 6, 7]
+function getDuplValues(arr){
+let dupl = {};
+for(i=0; i<arr.length; i++){
+let item = arr[i]
+if(dupl[item]){
+	dupl[item]= dupl[item]+1;
+}
+else{
+	dupl[item] = 1;
+}
+}
+return dupl;
+}
+console.log(getDuplValues(array))
+//Destructure
+let arr = ['520', 'test', 'test12', 'test123']
+const [first, second, third, fourth] = arr;
+console.log(first)
+
+//Focus on Input element on page load react
+import {useEffect, useRef} from 'react';
+function App(){
+  const inputRef = useRef(null);
+  useEffect(() => {
+    inputRef.current.focus();
+    }, []);
+    return <input type="text" ref={inputRef} />;
+}
