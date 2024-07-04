@@ -162,7 +162,7 @@ function getNthMax(arr1, arr2, n) {
 const n = 1; // For the maximum value
 console.log(getNthMax(arr1, arr2, n)); // Output: 55
 
-//Deloitte 
+//Deloitte  1st round
 //Count dupl from arr
 let array= [1, 1, 3, 4, 5, 6, 6, 7]
 function getDuplValues(arr){
@@ -192,4 +192,42 @@ function App(){
     inputRef.current.focus();
     }, []);
     return <input type="text" ref={inputRef} />;
+}
+
+//Deloitte  2nd round
+//write a code for passing value using useContext
+
+import { useContext, createContext, useState } from "react";
+
+const EgContext = createContext();
+
+export default function App() {
+  const [user, setUser] = useState("Harsh");
+
+  return (
+    <EgContext.Provider value={user}>
+      <h1>I'm the parent</h1>
+      <Child1 />
+    </EgContext.Provider>
+  );
+}
+
+function Child1() {
+  return (
+    <>
+      <h1>I'm child 1</h1>
+      <Child2 />
+    </>
+  );
+}
+
+function Child2() {
+  const user = useContext(EgContext);
+
+  return (
+    <>
+      <h1>I'm child 2 calling parent data</h1>
+      <p>{user}</p>
+    </>
+  );
 }
