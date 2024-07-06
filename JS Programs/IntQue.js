@@ -231,3 +231,33 @@ function Child2() {
     </>
   );
 }
+
+
+// Mphasis 1st round
+//write a code for checking anagram without sort
+function areAnagrams(str1, str2) {
+ 
+  const buildCharCount = (str) => {
+    const charCount = {};
+    for (let char of str.toLowerCase()) {
+      charCount[char] = (charCount[char] || 0) + 1;
+    }
+    return charCount;
+  };
+
+  const charCount1 = buildCharCount(str1);
+  const charCount2 = buildCharCount(str2);
+
+  for (let char in charCount1) {
+    if (charCount1[char] !== charCount2[char]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+const string1 = "army";
+const string2 = "mary";
+
+console.log(areAnagrams(string1, string2)); // true
