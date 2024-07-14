@@ -261,3 +261,21 @@ const string1 = "army";
 const string2 = "mary";
 
 console.log(areAnagrams(string1, string2)); // true
+
+//CitiusTech 1st
+//check repeatative chars 
+function checkVal(str) {
+  let strArr = str.split("");
+  for (let i = 0; i < strArr.length - 1; i++) {
+    if (strArr[i] === strArr[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+let str1 = 'abba'; // false
+let str2 = 'kapil'; // true
+
+console.log(checkVal(str1)); // false
+console.log(checkVal(str2)); // true
