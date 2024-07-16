@@ -279,3 +279,25 @@ let str2 = 'kapil'; // true
 
 console.log(checkVal(str1)); // false
 console.log(checkVal(str2)); // true
+
+//Securview 2nd Cisco
+//2nd highest num from array without inbuild method
+function secondHighest(arr) {
+  let highest = -Infinity;
+  let secondHighest = -Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > highest) {
+      secondHighest = highest;
+      highest = arr[i];
+    } else if (arr[i] > secondHighest && arr[i] < highest) {
+      secondHighest = arr[i];
+    }
+  }
+
+  return secondHighest;
+}
+let arr = [5, 3, 9, 1, 6, 7];
+console.log(secondHighest(arr)); // Output: 7
+
+
