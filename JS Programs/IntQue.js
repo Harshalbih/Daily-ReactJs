@@ -298,6 +298,6 @@ function secondHighest(arr) {
   return secondHighest;
 }
 let arr = [5, 3, 9, 1, 6, 7];
-console.log(secondHighest(arr)); // Output: 7
+console.log(secondHighest(arr)); // Output 7
 
 
