@@ -306,15 +306,15 @@ import { useState } from "react";
 
 export default function App() {
   const [name, setName] = useState("");
-  const [list, setList] = useState([]); // Initialize list as an empty array
+  const [list, setList] = useState([]); 
 
   function handleAdd() {
-    setList([...list, name]); // Spread the existing list array and add the new name
-    setName(""); // Clear the input field
+    setList([...list, name]); 
+    setName(""); 
   }
 
   function handleDelete(indexToDelete) {
-    setList(list.filter((_, index) => index !== indexToDelete)); // Filter out the item at the specified index
+    setList(list.filter((_, index) => index !== indexToDelete)); 
   }
 
   return (
@@ -324,14 +324,14 @@ export default function App() {
         type="text"
         placeholder="enter name"
         value={name}
-        onChange={(e) => setName(e.target.value)} // Update the name state with the input value
+        onChange={(e) => setName(e.target.value)} 
       />
       <button onClick={handleAdd}>Add</button>
       <ul>
         {list.map(
           (
             val,
-            index // Map over the list array
+            index
           ) => (
             <li key={index}>
               {val} <button onClick={() => handleDelete(index)}>Delete</button>
