@@ -300,4 +300,45 @@ function secondHighest(arr) {
 let arr = [5, 3, 9, 1, 6, 7];
 console.log(secondHighest(arr)); // Output: 7
 
+//spanidea 1st round
+// create simple todo in react
+import { useState } from "react";
 
+export default function App() {
+  const [name, setName] = useState("");
+  const [list, setList] = useState([]); // Initialize list as an empty array
+
+  function handleAdd() {
+    setList([...list, name]); // Spread the existing list array and add the new name
+    setName(""); // Clear the input field
+  }
+
+  function handleDelete(indexToDelete) {
+    setList(list.filter((_, index) => index !== indexToDelete)); // Filter out the item at the specified index
+  }
+
+  return (
+    <div className="App">
+      <h1>Hello</h1>
+      <input
+        type="text"
+        placeholder="enter name"
+        value={name}
+        onChange={(e) => setName(e.target.value)} // Update the name state with the input value
+      />
+      <button onClick={handleAdd}>Add</button>
+      <ul>
+        {list.map(
+          (
+            val,
+            index // Map over the list array
+          ) => (
+            <li key={index}>
+              {val} <button onClick={() => handleDelete(index)}>Delete</button>
+            </li>
+          )
+        )}
+      </ul>
+    </div>
+  );
+}
