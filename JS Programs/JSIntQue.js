@@ -11,7 +11,7 @@ function debounce(func, delay) {
 function myFunction() {
     console.log('Executing debounced function...');
 }
-// Debounce the function with a delay of 500 milliseconds
+// Debounce the function with a delay of 500 milliseconds 
 const debouncedFunction = debounce(myFunction, 500);
 // Call the debounced function
 debouncedFunction();
