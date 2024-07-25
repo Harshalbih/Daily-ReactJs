@@ -342,3 +342,24 @@ export default function App() {
     </div>
   );
 }
+
+//virtusa 1st round
+let string ="school";
+let strA = string.split('')
+
+function countRepeate(str){
+	let count = {}
+  for (let i=0; i<str.length; i++){
+  let item=str[i]
+  if(count[item]){
+  	count[item]++;
+  }
+  else{
+  	count[item]=1;
+  }
+  }
+return count;
+}
+console.log(countRepeate(strA))
+console.log(strA)
+
