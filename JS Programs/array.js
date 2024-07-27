@@ -5,7 +5,7 @@ console.log(dup);    //[1, 2, 3, 4]
 
 //or
 const arrayd = [1, 1, 2, 2, 3, 4];
-const dupl= arrayd.filter(function (item, pos) {
+const dupl= arrayd.filter((item, pos) => {
     return arrayd.indexOf(item) == pos;
   });
 console.log(dupl);  //[1, 2, 3, 4]
@@ -22,6 +22,27 @@ function dupl(array) {
   return uniqueArray;
 }
 console.log(dupl(array));     //[1, 2, 3, 4]
+
+//Distinct values only
+const array = [1, 1, 2, 2, 3, 4];
+function distinctValues(array) {
+  let frequency = {};
+  let result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    let item = array[i];
+    if (frequency[item]) {
+      frequency[item]++;
+    } else {
+      frequency[item] = 1;
+      result.push(item);
+    }
+  }
+  result = result.filter(item => frequency[item] === 1);
+  return result;
+}
+console.log(distinctValues(array)); // Output: [3, 4]
+
 
 //Find duplicate items from array
 let array = [1, 3, 5, 7, 1, 3, 5, 7, 9];

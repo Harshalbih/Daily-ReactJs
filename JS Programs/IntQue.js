@@ -363,3 +363,22 @@ return count;
 console.log(countRepeate(strA))
 console.log(strA)
 
+//**Neosoft 2nd --Distinct values only
+const array = [1, 1, 2, 2, 3, 4];
+function distinctValues(array) {
+  let frequency = {};
+  let result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    let item = array[i];
+    if (frequency[item]) {
+      frequency[item]++;
+    } else {
+      frequency[item] = 1;
+      result.push(item);
+    }
+  }
+  result = result.filter(item => frequency[item] === 1);
+  return result;
+}
+console.log(distinctValues(array)); // Output: [3, 4]
