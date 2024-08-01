@@ -382,3 +382,27 @@ function distinctValues(array) {
   return result;
 }
 console.log(distinctValues(array)); // Output: [3, 4]
+
+//LTI 2nd 
+//palindrome without reverse
+function ispalindrome(str){
+  let left =0;
+  let right = str.length-1;
+  while(left<right){
+    if(str[left] != str[right]){
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
+}
+
+//currying for multiply
+function multiply(a) {
+  return function(b) {
+    return function(c) {
+    return a * b *c;
+    }
+    }
+    multiply(2,3,4)
