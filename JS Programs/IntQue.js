@@ -406,3 +406,67 @@ function multiply(a) {
     }
     }
     multiply(2,3,4)
+
+//Zimetrics 2nd - form data post request
+import { useEffect, useState } from "react";
+import "./styles.css";
+
+export default function App() {
+  const [fname, setfName] = useState("");
+  const [lname, setlName] = useState("");
+  const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    handleForm();
+  }, []);
+
+  function handleForm() {
+    console.log(fname);
+    fetch("https://jsonplaceholder.typicode.com/todos/1", {
+      method: "POST",
+      header: {
+        "Content-Type": "body/json",
+      },
+      body: JSON.stringify({
+        fname: "FirstName",
+        lname: "LastName",
+        email: "UserEmail",
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }
+
+  return (
+    <div className="App">
+      <label>
+        First Name:
+        <input
+          type="text"
+          placeholder="name"
+          value={fname}
+          onChange={(e) => setfName(e.target.value)}
+        />
+      </label>
+      <label>
+        Last Name:
+        <input
+          type="text"
+          placeholder="name"
+          value={lname}
+          onChange={(e) => setlName(e.target.value)}
+        />
+      </label>
+      <label>
+        Email:
+        <input
+          type="email"
+          placeholder="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </label>
+      <button onClick={handleForm}>Register</button>
+    </div>
+  );
+}
