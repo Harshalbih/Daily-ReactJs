@@ -470,3 +470,30 @@ export default function App() {
     </div>
   );
 }
+
+//LTI MIndtree 2nd round
+//return promise wit 50% resolve and 50% reject probabilty
+function randomPromise() {
+  return new Promise((resolve, reject) => {
+    let random = Math.random();
+    if (random < 0.5) {
+      resolve("Promise resolved");
+    } else {
+      reject("Promise rejected");
+    }
+  });
+}
+function executePromises() {
+  for (let i = 0; i < 4; i++) {
+    randomPromise()
+      .then((message) => {
+        console.log(message);
+        
+      })
+      .catch((message) => {
+        console.log(message);   
+      });
+  }
+}
+executePromises();
+
