@@ -497,3 +497,39 @@ function executePromises() {
 }
 executePromises();
 
+//Leapfrog 1st**
+//filter using search input api response
+import "./styles.css";
+import { useState, useEffect } from "react";
+
+export default function App() {
+  const [userData, setUserData] = useState([]);
+  const [search, setSearch] = useState("");
+
+  function fetchData() {
+    fetch("https://jsonplaceholder.typicode.com/todos/")
+      .then((resp) => resp.json())
+      .then((data) => setUserData(data));
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  function handleSearch(event) {
+    setSearch(event.target.value);
+  }
+  
+  const filteredTitle = userData.filter(item => item.title.includes(search));
+  
+  return (
+    <div className="App">
+      <input type="text" onChange={handleSearch} />
+      <ul>
+        {filteredTitle.map((val) => (
+          <li key={val.id}>{val.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
