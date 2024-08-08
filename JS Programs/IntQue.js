@@ -533,3 +533,27 @@ export default function App() {
     </div>
   );
 }
+
+//Tiger Analytics 2nd **
+//Write a function to obtain available denomination according to amount given
+function withdrawMoney(amount, availableNotes){
+	if(amount % 100 !== 0){
+	alert('Amount should be multiple of 100')
+      return; }
+
+const demoninations= [2000, 500, 100];
+availableNotes.sort((a,b)=> b-a);
+const result = {};
+for(let notes of availableNotes){
+	if(amount >= notes){
+	result[notes]= Math.floor(amount / notes);
+		amount %= notes;
+      }
+    }
+       console.log('result')
+	for(let notes in result){
+	console.log(result[notes])	
+	}  
+}
+withdrawMoney(4900, [100,500])
+	
